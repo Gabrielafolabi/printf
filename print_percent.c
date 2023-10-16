@@ -10,5 +10,5 @@
 int print_37(void)
 {
 	_putchar(37);
-	return (write(1, "%%", 1));
+	return (1);
 }
