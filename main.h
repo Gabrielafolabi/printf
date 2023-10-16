@@ -14,7 +14,9 @@ int _strlen(char *str);
 int print_37(void);
 int _decimal(va_list args);
 int _interger(va_list args);
-int printf(const char *format, ...);
+int _binary(va_list val)
+
+
 
 
 
