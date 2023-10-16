@@ -20,7 +20,7 @@ int printf_s(va_list val)
 		str = "(NULL)";
 		length = _strlen (str);
 		
-		i == 0;
+		i = 0;
 		while (i < length)
 		{
 			_putchar(str[i]);
@@ -34,7 +34,7 @@ int printf_s(va_list val)
 	{
 		length = _strlen(str);
 
-		i == 0;
+		i = 0;
 		while (i < length)
 		{
 			_putchar(str[i]);
