@@ -6,7 +6,6 @@
  */
 int printf_c(va_list val)
 {
-va_list va_start va_arg va_end
 	char str;
 
 	str = va_arg(val, int);
