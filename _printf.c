@@ -45,7 +45,7 @@ int _printf(const char *format, ...)
 
 				for (len = 0; str[len] != '\0'; str++)
 				{
-					write(1, str, len);
+					write(1, str, 1);
 					print_char += len;
 				}
 			}
