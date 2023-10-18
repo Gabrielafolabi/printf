@@ -7,8 +7,10 @@
 int _printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
-	int print_char = 0;
+	int print_char = 0, len;
+	char *str, c;
 	va_list args;
+
 
 	va_start(args, format);
 	if (*format == ' ')
@@ -33,17 +35,16 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'c')
 			{
-				char c = va_arg(args, int);
+				c = va_arg(args, int);
 
 				write(1, &c, 1);
 				print_char++;
 			}
 			else if (*format == 's')
 			{
-				char *str = va_arg(args, char*);
-				int len = 0;
+				str = va_arg(args, char*);
 
-				for (len = 0; str[len] != '\0'; str++)
+				for (len = 0; str[len] != '\0'; len++)
 				{
 					write(1, str, 1);
 					print_char += len;
