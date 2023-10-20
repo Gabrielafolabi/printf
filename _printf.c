@@ -7,17 +7,17 @@
 int _printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
-	int print_char = 0;
+	int print_char = 0, count;
 	va_list args;
 
 
 	va_start(args, format);
-	if (*format == ' ')
-	return (1);
+	if (format == NULL)
+		return (1);
 
-	while (*format)
+	while (format && format[count] != NULL)
 	{
-		if (*format != '%')
+		if (format[count] != '%')
 		{
 			write(1, format, 1);
 			print_char++;
@@ -25,21 +25,21 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-			if (*format == '\0')
+			if (format == '\0')
 				break;
-			if (*format == '%')
+			if (format == '%')
 			{
 				write(1, format, 1);
 				print_char++;
 			}
-			else if (*format == 'c')
+			else if (format == 'c')
 			{
 				char c = va_arg(args, int);
 
 				write(1, &c, 1);
 				print_char++;
 			}
-			else if (*format == 's')
+			else if (format == 's')
 			{
 				char *str = va_arg(args, char*);
 				int len;
