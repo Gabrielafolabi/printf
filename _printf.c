@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 	int print_char = 0, count = 0;
 	va_list args;
 
-
 	va_start(args, format);
 	if (format == NULL)
 		return (1);
@@ -43,6 +42,7 @@ int _printf(const char *format, ...)
 			{
 				char *str = va_arg(args, char*);
 				int len;
+
 				for (len = 0; str[len] != '\0'; len++)
 				{
 					write(1, &str[len], len);
