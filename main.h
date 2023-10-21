@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...);
 int printf_c(va_list val);
-int _strlenchar(const char * str);
+int _strlenchar(const char *str);
 int _strlen(char *str);
 int _decimal(va_list args);
 int _interger(va_list args);
