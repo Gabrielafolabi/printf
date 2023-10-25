@@ -18,7 +18,7 @@ int _printf(const char *format, ...) {
             write(1, format, 1);
             print_char++;
         } else {
-            format++;  // Move past the '%'
+            format++; 
             if (*format == '\0') break;
             if (*format == '%') {
                 write(1, format, 1);
